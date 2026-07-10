@@ -1,0 +1,48 @@
+flowchart TD
+    A["📁 manutencao_preditiva.csv\n~10.000 linhas · 14 colunas"] --> B
+
+    subgraph FASE1["Fase 1 — EDA"]
+        B["shape · dtypes · describe()\n7 gráficos analíticos"]
+    end
+
+    subgraph FASE2["Fase 2 — Data Prep"]
+        C["Remove duplicatas\nImputa NaN (média/mediana)\nBoxplots de outliers"]
+    end
+
+    subgraph FASE3["Fase 3 — Feature Engineering"]
+        D["potencia = rpm × torque_nm\nvalidação de nulos"]
+    end
+
+    subgraph FASE4["Fase 4 — Split + Balanceamento"]
+        E["train_test_split 80/20\nstratify=y · random_state=42"]
+        F["SMOTE — somente no treino"]
+    end
+
+    subgraph FASE5["Fase 5 — Scaling"]
+        G["StandardScaler\nfit_transform treino\ntransform teste"]
+        H["Sem scaling\n(invariante à escala)"]
+    end
+
+    subgraph FASE6["Fase 6 — Tuning + Overfitting"]
+        I["KNN\nK = 3, 5, 7"]
+        J["Árvore de Decisão\ndepth = 3, 5, None"]
+    end
+
+    subgraph FASE7["Fase 7 — Avaliação Final"]
+        K["Melhor KNN\nAcurácia no teste"]
+        L["Melhor Árvore\nAcurácia no teste"]
+        M["🏆 Veredito Final\nmetricas_finais.json"]
+    end
+
+    B --> C --> D --> E
+    E --> F
+    F --> G --> I
+    F --> H --> J
+    E --> G
+    E --> H
+    I --> K
+    J --> L
+    K --> M
+    L --> M
+
+    %% Última revisão: 2026-07-10
