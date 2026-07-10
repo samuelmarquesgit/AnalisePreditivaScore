@@ -46,6 +46,38 @@ Colunas EXCLUÍDAS de X:
 }
 ```
 
+## Contrato de Dados — Saída JSON da Auditoria (exploratório)
+
+```json
+{
+    "confusion_matrix": {"knn": [[int, int], [int, int]], "arvore": [[int, int], [int, int]]},
+    "metricas_extras": {
+        "knn":    {"precisao": <float>, "recall": <float>, "f1": <float>},
+        "arvore": {"precisao": <float>, "recall": <float>, "f1": <float>}
+    },
+    "desempenho_por_tipo": [
+        {"tipo": "<L|M|H>", "n": <int>, "acc_knn": <float>, "acc_arvore": <float>}
+    ]
+}
+```
+Arquivo: `outputs/auditoria_metricas.json`
+
+## Contrato de Dados — Saída JSON Ampliada (exploratório)
+
+```json
+{
+    "resultados": {
+        "knn": {"acuracia_treino": <float>, "acuracia_teste": <float>},
+        "arvore_decisao": {"acuracia_treino": <float>, "acuracia_teste": <float>},
+        "random_forest": {"acuracia_treino": <float>, "acuracia_teste": <float>},
+        "xgboost": {"acuracia_treino": <float>, "acuracia_teste": <float>},
+        "lightgbm": {"acuracia_treino": <float>, "acuracia_teste": <float>}
+    },
+    "melhor_modelo": "<string>"
+}
+```
+Arquivo: `outputs/metricas_modelos_avancados.json`
+
 ## Nomenclatura de Variáveis
 
 | Variável | Descrição |
@@ -58,14 +90,19 @@ Colunas EXCLUÍDAS de X:
 | `X_train_knn`, `X_test_knn` | Dados escalonados para KNN |
 | `X_train_tree`, `X_test_tree` | Dados originais para Árvore |
 | `scaler` | Instância do StandardScaler |
+| `y_pred_knn`, `y_pred_arvore` | Predições no teste — usadas na auditoria (exploratório) |
+| `cm_knn`, `cm_arvore` | Matrizes de confusão (exploratório) |
+| `rf_final`, `xgb_final`, `lgbm_final` | Modelos treinados nas Fases 8-9 (exploratório) |
+| `resultados_ampliados`, `melhor_modelo_ampliado` | Comparação dos 5 modelos — Fase 10 (exploratório) |
 
 ## Parâmetros Fixos (reprodutibilidade)
 
 | Parâmetro | Valor | Onde usar |
 |---|---|---|
-| `random_state` | 42 | `train_test_split`, `DecisionTreeClassifier`, `SMOTE` |
+| `random_state` | 42 | `train_test_split`, `DecisionTreeClassifier`, `SMOTE`, `RandomForestClassifier`, `XGBClassifier`, `LGBMClassifier` |
 | `test_size` | 0.2 | `train_test_split` |
 | `stratify` | `y` | `train_test_split` |
+| `n_estimators` | 100 | `RandomForestClassifier` (exploratório) |
 
 ---
 

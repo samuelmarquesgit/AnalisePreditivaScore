@@ -5,7 +5,7 @@
 ```
 AnalisePreditivaScore/
 │
-├── notebook.ipynb              ← Pipeline completo (7 fases)
+├── notebook.ipynb              ← Pipeline: 7 fases obrigatórias + auditoria e Fases 8-10 (exploratório)
 ├── requirements.txt            ← Dependências de produção (versões mínimas; fixar com `pip freeze` antes da entrega)
 ├── requirements-dev.txt        ← Dependências de desenvolvimento
 ├── pytest.ini                  ← Configuração pytest + cobertura
@@ -13,7 +13,6 @@ AnalisePreditivaScore/
 ├── .env                        ← Configuração local real (NÃO commitar)
 ├── .gitignore
 ├── README.md
-├── CLAUDE.md                   ← Contexto para Claude Code
 │
 ├── data/
 │   └── manutencao_preditiva.csv
@@ -34,6 +33,7 @@ AnalisePreditivaScore/
 │   ├── test_report.md
 │   ├── arquitetura.mmd
 │   ├── auditoria/
+│   │   └── model_card.md   ← Model Card (exploratório)
 │   ├── postman/
 │   └── pdf/
 │       ├── anotações do Departamento de Engenharia.docx
@@ -55,6 +55,8 @@ AnalisePreditivaScore/
 ├── outputs/
 │   ├── graficos/
 │   ├── metricas_finais.json
+│   ├── auditoria_metricas.json          ← exploratório
+│   ├── metricas_modelos_avancados.json  ← exploratório
 │   └── coverage_html/
 │
 └── .github/
@@ -78,4 +80,4 @@ AnalisePreditivaScore/
 
 ---
 
-_Última revisão: 2026-07-10_
+_Última revisão: 2026-07-10 (removida referência a CLAUDE.md, não versionado a pedido do autor)_

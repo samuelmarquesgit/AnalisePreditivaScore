@@ -133,4 +133,53 @@
 
 ---
 
+## TASK-11 · Auditoria do Modelo (exploratório, não obrigatório)
+
+**Branch:** `git checkout -b docs/auditoria-model-card`
+
+1. `confusion_matrix`, `precision_score`, `recall_score`, `f1_score` para KNN e Árvore
+2. Plotar Gráfico 16 — matrizes de confusão
+3. Desempenho por tipo de máquina (L/M/H)
+4. Criar `docs/auditoria/model_card.md` com os resultados
+5. Exportar `outputs/auditoria_metricas.json`
+6. Merge na develop
+
+---
+
+## TASK-12 · Fase 8 — Random Forest (exploratório, não obrigatório)
+
+**Branch:** `git checkout -b feature/random-forest`
+
+1. Treinar `RandomForestClassifier(n_estimators=100, random_state=42)` em `X_train_tree`/`y_train_bal`
+2. `accuracy_score` treino e teste
+3. Plotar Gráfico 17 — KNN vs Árvore vs Random Forest
+4. `git commit -m "adiciona Random Forest como extensao exploratoria"`
+5. Merge na develop
+
+---
+
+## TASK-13 · Fase 9 — Boosting: XGBoost e LightGBM (exploratório, não obrigatório)
+
+**Branch:** `git checkout -b feature/boosting`
+
+1. Treinar `XGBClassifier` e `LGBMClassifier` (`random_state=42`) em `X_train_tree`/`y_train_bal`
+2. `accuracy_score` treino e teste para os dois
+3. Plotar Gráfico 18 — XGBoost vs LightGBM
+4. `git commit -m "adiciona XGBoost e LightGBM como extensao exploratoria"`
+5. Merge na develop
+
+---
+
+## TASK-14 · Fase 10 — Comparação Final Ampliada (exploratório, não obrigatório)
+
+**Branch:** `git checkout -b feature/comparacao-ampliada`
+
+1. Plotar Gráfico 19 — comparação dos 5 modelos (KNN, Árvore, Random Forest, XGBoost, LightGBM)
+2. Exportar `outputs/metricas_modelos_avancados.json`
+3. Célula Markdown: Veredito Ampliado — deixa claro que **não substitui** o veredito oficial da Fase 7
+4. `git commit -m "adiciona comparacao final ampliada com 5 modelos"`
+5. Merge na develop
+
+---
+
 _Última revisão: 2026-07-10_

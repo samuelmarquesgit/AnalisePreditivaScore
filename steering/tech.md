@@ -52,4 +52,18 @@ JSON é o formato padrão de intercâmbio de dados em sistemas de produção. De
 
 ---
 
+## DT-09 · Auditoria e modelos avançados como extensão exploratória, não substituição (exploratório)
+
+**Decisão:** a auditoria do modelo (Model Card) e as Fases 8-10 (Random Forest, XGBoost, LightGBM) foram adicionadas como seções à parte, depois da Fase 7, em vez de substituir a comparação KNN vs Árvore.  
+**Por quê:** o enunciado exige especificamente a comparação entre KNN e Árvore de Decisão (Seção 7 do `docs/PRD.md`). Misturar os modelos exploratórios no veredito oficial da Fase 7 arriscaria descumprir esse requisito. Mantendo-os separados, a extensão soma valor (auditoria mais rigorosa, benchmark contra modelos mais robustos) sem colocar em risco a nota da entrega obrigatória.
+
+---
+
+## DT-10 · Recall como métrica-guia da auditoria, não a acurácia (exploratório)
+
+**Decisão:** a auditoria prioriza o **recall da classe Falha (1)**, não a acurácia, para avaliar risco.  
+**Por quê:** com ~97% dos exemplos na classe "Normal", a acurácia isolada é enganosa — um classificador trivial que sempre prevê "Normal" teria ~97% de acurácia sem detectar nenhuma falha. Em manutenção preditiva, um falso negativo (falha não detectada) tem custo maior que um falso positivo (manutenção desnecessária), o que torna o recall a métrica mais relevante para avaliar o risco real do modelo — mesmo que o critério de seleção oficial da Fase 7 continue sendo a acurácia, por exigência do enunciado.
+
+---
+
 _Última revisão: 2026-07-10_

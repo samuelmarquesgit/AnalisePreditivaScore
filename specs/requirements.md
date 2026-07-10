@@ -34,6 +34,21 @@
 | RNF06 | Repositório público | GitHub em modo público — avaliador consegue clonar | ⬜ |
 | RNF07 | Código autoral | Todos os blocos integral gerado por IA (Seção 8) | ✅ |
 
+## Requisitos Exploratórios (RFE) — extensão não obrigatória
+
+Não contam para os critérios de avaliação oficiais (Seção 7 do `docs/PRD.md`); documentados para rastreabilidade da extensão.
+
+| ID | Requisito | Critério de Aceite | Status |
+|---|---|---|---|
+| RFE01 | Matriz de confusão para KNN e Árvore | `confusion_matrix` calculada e plotada (Gráfico 16) | ✅ |
+| RFE02 | Precisão, recall e F1 para KNN e Árvore | `precision_score`, `recall_score`, `f1_score` calculados | ✅ |
+| RFE03 | Desempenho por tipo de máquina (L/M/H) | Acurácia de cada modelo quebrada por subgrupo | ✅ |
+| RFE04 | Model Card documentado | `docs/auditoria/model_card.md` com uso pretendido, riscos e limitações | ✅ |
+| RFE05 | Treinar Random Forest | `RandomForestClassifier` treinado e avaliado (Fase 8) | ✅ |
+| RFE06 | Treinar XGBoost e LightGBM | `XGBClassifier` e `LGBMClassifier` treinados e avaliados (Fase 9) | ✅ |
+| RFE07 | Comparação ampliada dos 5 modelos | Gráfico 19 + `outputs/metricas_modelos_avancados.json` (Fase 10) | ✅ |
+| RFE08 | Não substituir o veredito oficial | Célula de texto deixa explícito que a Fase 7 continua sendo a entrega avaliada | ✅ |
+
 ---
 
 _Última revisão: 2026-07-10_

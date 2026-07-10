@@ -138,6 +138,61 @@
 
 ---
 
+## Auditoria do Modelo (extensão exploratória, não obrigatória)
+
+**Branch:** `docs/auditoria-model-card`
+
+| # | Tarefa | Status |
+|---|---|---|
+| A1 | Matriz de confusão (KNN e Árvore) | ✅ |
+| A2 | Precisão, recall e F1-score (KNN e Árvore) | ✅ |
+| A3 | Desempenho por tipo de máquina (L/M/H) | ✅ |
+| A4 | Gráfico 16: Matrizes de confusão | ✅ |
+| A5 | Model Card em `docs/auditoria/model_card.md` | ✅ |
+| A6 | Exportar `outputs/auditoria_metricas.json` | ✅ |
+
+---
+
+## Fase 8 — Random Forest (extensão exploratória, não obrigatória)
+
+**Branch:** `feature/random-forest`
+
+| # | Tarefa | Status |
+|---|---|---|
+| 8.1 | Treinar `RandomForestClassifier` (n_estimators=100, random_state=42) | ✅ |
+| 8.2 | Acurácia de treino e teste | ✅ |
+| 8.3 | Gráfico 17: KNN vs Árvore vs Random Forest | ✅ |
+| 8.4 | Merge na `develop` via PR | ⬜ |
+
+---
+
+## Fase 9 — Boosting: XGBoost e LightGBM (extensão exploratória, não obrigatória)
+
+**Branch:** `feature/boosting`
+
+| # | Tarefa | Status |
+|---|---|---|
+| 9.1 | Treinar `XGBClassifier` (random_state=42) | ✅ |
+| 9.2 | Treinar `LGBMClassifier` (random_state=42) | ✅ |
+| 9.3 | Acurácia de treino e teste para os dois | ✅ |
+| 9.4 | Gráfico 18: XGBoost vs LightGBM | ✅ |
+| 9.5 | Merge na `develop` via PR | ⬜ |
+
+---
+
+## Fase 10 — Comparação Final Ampliada (extensão exploratória, não obrigatória)
+
+**Branch:** `feature/comparacao-ampliada`
+
+| # | Tarefa | Status |
+|---|---|---|
+| 10.1 | Gráfico 19: comparação dos 5 modelos | ✅ |
+| 10.2 | Exportar `outputs/metricas_modelos_avancados.json` | ✅ |
+| 10.3 | Célula de texto — Veredito Ampliado (não substitui a Fase 7) | ✅ |
+| 10.4 | Merge na `develop` via PR | ⬜ |
+
+---
+
 ## Documentação
 
 **Branch:** `docs/readme`

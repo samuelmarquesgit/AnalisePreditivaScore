@@ -55,4 +55,10 @@ Relatório completo: `outputs/coverage_html/index.html`
 
 ---
 
-_Última revisão: 2026-07-09_
+## Nota sobre a extensão exploratória
+
+A suite `tests/` cobre apenas as Fases 1-7 (entrega oficial). A Auditoria do Modelo e as Fases 8-10 (Random Forest, XGBoost, LightGBM) são exploratórias e não têm testes dedicados — seus artefatos (`outputs/auditoria_metricas.json`, `outputs/metricas_modelos_avancados.json`) podem ser inspecionados manualmente ou via `docs/auditoria/model_card.md`.
+
+---
+
+_Última revisão: 2026-07-10_

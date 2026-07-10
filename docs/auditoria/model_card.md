@@ -72,6 +72,18 @@ O conjunto de teste **não** passou por SMOTE nem por `fit` de nenhum transforma
 
 O modelo é consistente entre os três tipos de máquina — nenhum subgrupo mostra queda de acurácia desproporcional. A Árvore de Decisão mantém desempenho estável (93-94%) em L, M e H; o KNN varia um pouco mais, com o pior resultado no tipo H (89,25%, também o subgrupo com menor `n` no teste, 214 amostras).
 
+### Comparação Ampliada — Random Forest, XGBoost, LightGBM (Fase 10)
+
+> ⏳ **Pendente** — o notebook já tem as Fases 8-10 implementadas (treino de Random Forest, XGBoost e LightGBM, com comparação final dos 5 modelos). Falta rodar `Restart & Run All` e colar aqui a saída da célula de comparação ampliada (`resultados_ampliados` / `outputs/metricas_modelos_avancados.json`) para preencher esta seção com os números reais.
+
+| Modelo | Acurácia treino | Acurácia teste |
+|---|---|---|
+| Random Forest | _preencher_ | _preencher_ |
+| XGBoost | _preencher_ | _preencher_ |
+| LightGBM | _preencher_ | _preencher_ |
+
+Esta comparação é exploratória e **não substitui** o veredito oficial da Fase 7 (KNN vs Árvore de Decisão) — ver `docs/PRD.md`, Seção 3.
+
 ## Análise de Risco
 
 - **Falso negativo** (falha real prevista como normal): risco de segurança e parada não planejada — o custo mais crítico neste domínio. O **recall da classe Falha (1)** é a métrica mais relevante para avaliar esse risco, mais do que a acurácia agregada.

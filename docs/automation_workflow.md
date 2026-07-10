@@ -74,6 +74,34 @@ with open("outputs/metricas_finais.json", "w", encoding="utf-8") as f:
     json.dump(metricas, f, ensure_ascii=False, indent=2)
 ```
 
+## Fluxo de Modelos Avançados — Fases 8-10 (exploratório)
+
+```
+X_train_tree, y_train_bal (mesmos dados da Árvore — sem scaling)
+    ↓
+    ├── RandomForestClassifier(n_estimators=100, random_state=42)      → Fase 8
+    ├── XGBClassifier(random_state=42, eval_metric='logloss')          → Fase 9
+    └── LGBMClassifier(random_state=42, verbose=-1)                    → Fase 9
+    ↓
+accuracy_score(treino) e accuracy_score(teste) para cada um
+    ↓
+Comparação com KNN e Árvore (Fase 10) → outputs/metricas_modelos_avancados.json
+```
+
+## Fluxo de Auditoria (Model Card, exploratório)
+
+```
+knn_final, arvore_final (modelos da Fase 7)
+    ↓
+predict(X_test_knn) / predict(X_test_tree)
+    ↓
+confusion_matrix, precision_score, recall_score, f1_score
+    ↓
+desempenho por tipo de máquina (L/M/H) via df.loc[X_test.index, 'tipo']
+    ↓
+outputs/auditoria_metricas.json → docs/auditoria/model_card.md
+```
+
 ## Fluxo Git por Feature
 
 ```bash
@@ -89,4 +117,4 @@ git merge feature/<nome-da-fase>
 
 ---
 
-_Última revisão: 2026-07-09_
+_Última revisão: 2026-07-10_

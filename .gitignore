@@ -1,0 +1,46 @@
+# Credenciais — NUNCA versionar
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Ambientes virtuais
+.venv/
+venv/
+env/
+ENV/
+
+# Outputs gerados (regeneráveis)
+outputs/graficos/
+outputs/coverage_html/
+outputs/metricas_finais.json
+outputs/auditoria_metricas.json
+outputs/metricas_modelos_avancados.json
+
+# Anotações pessoais — não versionar
+docs/anotacoes.txt
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# pytest
+.pytest_cache/
+.coverage

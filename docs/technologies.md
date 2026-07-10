@@ -15,8 +15,10 @@
 | `numpy` | 1.24 | Cálculos estatísticos (IQR, percentis, skewness), vetorização |
 | `matplotlib` | 3.7 | Histogramas, barras, linhas de tuning, subplots |
 | `seaborn` | 0.12 | Heatmaps, scatter, boxplot, violinplot, countplot, KDE |
-| `scikit-learn` | 1.3 | Split, StandardScaler, KNN, Árvore de Decisão, accuracy_score |
+| `scikit-learn` | 1.3 | Split, StandardScaler, KNN, Árvore de Decisão, Random Forest, accuracy_score, confusion_matrix |
 | `imbalanced-learn` | 0.11 | SMOTE para balanceamento da classe minoritária |
+| `xgboost` | 2.0 | XGBClassifier — Fase 9 (exploratória) |
+| `lightgbm` | 4.1 | LGBMClassifier — Fase 9 (exploratória) |
 | `json` | stdlib | Exportação de métricas finais para arquivo |
 
 ## Bibliotecas de Desenvolvimento
@@ -39,7 +41,11 @@
 | 5 — Scaling | `sklearn.preprocessing` |
 | 6 — Modelos | `sklearn.neighbors`, `sklearn.tree`, `sklearn.metrics` |
 | 7 — Avaliação | `sklearn.metrics`, `json`, `os` |
+| Auditoria (expl.) | `sklearn.metrics` (confusion_matrix, precision_score, recall_score, f1_score) |
+| 8 — Random Forest (expl.) | `sklearn.ensemble` |
+| 9 — Boosting (expl.) | `xgboost`, `lightgbm` |
+| 10 — Comparação Ampliada (expl.) | `json` |
 
 ---
 
-_Última revisão: 2026-07-09_
+_Última revisão: 2026-07-10_

@@ -15,6 +15,7 @@
 | 11/07 (Sex) | Fase 6 | Tuning KNN e Árvore + gráficos de overfitting |
 | 12/07 (Sab) | Fase 7 | Avaliação final + JSON exportado |
 | 13/07 (Dom) | Docs | README.md completo + `requirements.txt` com versões fixas |
+| — | Extensão (expl.) | Auditoria (Model Card) + Fases 8-10: Random Forest, XGBoost, LightGBM — não bloqueia o prazo, feito com folga antes do dia 13 |
 | 14/07 (Seg) | Revisão | Restart & Run All sem erros + merge develop → main |
 | 15/07 (Ter) | Vídeo | Gravação e upload no Google Drive |
 | 16/07 (Qua) | Buffer | Ajustes finais + submissão no AVA |
@@ -30,4 +31,4 @@
 
 ---
 
-_Última revisão: 2026-07-09_
+_Última revisão: 2026-07-10_

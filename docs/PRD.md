@@ -43,10 +43,14 @@ Sistema de Machine Learning que analisa leituras históricas de sensores (temper
 - Repositório GitHub público com branching strategy
 - Vídeo de apresentação (máx. 7 min)
 
-### Fora do escopo
+### Fora do escopo (entrega oficial)
 - Deploy em produção / API REST (listado como melhoria futura)
-- Outros algoritmos além de KNN e Árvore de Decisão
 - Otimização automática de hiperparâmetros (GridSearchCV)
+
+### Extensão exploratória (não obrigatória, Fases 8-10)
+- Auditoria do modelo (Model Card em `docs/auditoria/model_card.md`): matriz de confusão, precisão/recall/F1, desempenho por tipo de máquina
+- Comparação com Random Forest, XGBoost e LightGBM, com base no material de apoio `docs/pdf/Conhecendo Alguns Modelos de Machine Learning.pdf`
+- Esta extensão **não substitui** o veredito oficial da Fase 7 (KNN vs Árvore de Decisão), que continua sendo o critério de avaliação do enunciado
 
 ---
 

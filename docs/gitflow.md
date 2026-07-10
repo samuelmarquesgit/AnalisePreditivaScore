@@ -12,6 +12,10 @@ main
     ├── feature/scaling
     ├── feature/hyperparams
     ├── feature/evaluation
+    ├── feature/random-forest       (Fase 8, exploratório)
+    ├── feature/boosting            (Fase 9, exploratório)
+    ├── feature/comparacao-ampliada (Fase 10, exploratório)
+    ├── chore/setup-inicial
     └── docs/*
         ├── docs/readme
         ├── docs/docs-architecture
@@ -22,6 +26,7 @@ main
         ├── docs/docs-test-report
         ├── docs/docs-prd
         ├── docs/docs-backlog
+        ├── docs/docs-arquitetura-mmd
         ├── docs/specs-tasks
         ├── docs/specs-design
         ├── docs/specs-requirements
@@ -30,7 +35,9 @@ main
         ├── docs/steering-tech
         ├── docs/github-pr-template
         ├── docs/github-issue-bug-report
-        └── docs/github-issue-feature-request
+        ├── docs/github-issue-feature-request
+        ├── docs/sql-schema
+        └── docs/auditoria-model-card
 ```
 
 ## Regras
@@ -92,4 +99,4 @@ git push origin develop
 
 ---
 
-_Última revisão: 2026-07-09_
+_Última revisão: 2026-07-10_

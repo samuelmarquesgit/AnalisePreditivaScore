@@ -19,7 +19,15 @@
                                └──────────┬──────────┘
                                     [Avaliação Final]
                                     [metricas.json]
+                                          │
+                                    [Auditoria/Model Card]
+                                          │
+                         ┌────────────────┼────────────────┐
+                    [Random Forest]  [XGBoost/LightGBM]  [Comparação Ampliada]
+                     (Fase 8, expl.)   (Fase 9, expl.)    (Fase 10, expl.)
 ```
+
+As três últimas etapas (Auditoria, Fase 8, Fase 9, Fase 10) são uma extensão exploratória — não fazem parte da entrega oficial (Fases 1-7).
 
 ---
 
@@ -65,6 +73,10 @@
 | 13 | Linha | Hiperparâmetros | Matplotlib | K × Acurácia (KNN) |
 | 14 | Linha | Hiperparâmetros | Matplotlib | max_depth × Acurácia (Árvore) |
 | 15 | Barras | Avaliação | Matplotlib | Comparação final KNN vs Árvore |
+| 16 | Heatmap duplo | Auditoria | Seaborn | Matrizes de confusão — KNN e Árvore |
+| 17 | Barras | Fase 8 (expl.) | Seaborn | KNN vs Árvore vs Random Forest |
+| 18 | Barras | Fase 9 (expl.) | Seaborn | XGBoost vs LightGBM |
+| 19 | Barras | Fase 10 (expl.) | Seaborn | Comparação final ampliada (5 modelos) |
 
 ---
 
@@ -77,7 +89,8 @@
 | Estratificação | `stratify=y` | Mantém proporção de classes em treino e teste |
 | Reprodutibilidade | `random_state=42` | Qualquer máquina produz o mesmo resultado |
 | Caminhos | Relativos | Portabilidade — avaliador consegue rodar sem modificação |
+| Modelos exploratórios sem scaling | Random Forest, XGBoost, LightGBM usam `X_train_tree`/`X_test_tree` | São todos baseados em árvore — mesma justificativa da Árvore de Decisão (DT-03 em `steering/tech.md`) |
 
 ---
 
-_Última revisão: 2026-07-09_
+_Última revisão: 2026-07-10_

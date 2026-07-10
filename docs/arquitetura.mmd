@@ -34,6 +34,24 @@ flowchart TD
         M["🏆 Veredito Final\nmetricas_finais.json"]
     end
 
+    subgraph AUDIT["Auditoria do Modelo (exploratório)"]
+        N["Matriz de confusão\nprecisão · recall · F1\ndesempenho por tipo L/M/H"]
+        O["📋 Model Card\ndocs/auditoria/model_card.md"]
+    end
+
+    subgraph FASE8["Fase 8 — Random Forest (exploratório)"]
+        P["RandomForestClassifier\nn_estimators=100"]
+    end
+
+    subgraph FASE9["Fase 9 — Boosting (exploratório)"]
+        Q["XGBoost"]
+        R["LightGBM"]
+    end
+
+    subgraph FASE10["Fase 10 — Comparação Ampliada (exploratório)"]
+        S["🏆 Veredito Ampliado\nmetricas_modelos_avancados.json"]
+    end
+
     B --> C --> D --> E
     E --> F
     F --> G --> I
@@ -44,5 +62,13 @@ flowchart TD
     J --> L
     K --> M
     L --> M
+    M --> N --> O
+    F --> P
+    F --> Q
+    F --> R
+    P --> S
+    Q --> S
+    R --> S
+    O --> S
 
     %% Última revisão: 2026-07-10
