@@ -76,7 +76,9 @@ AnalisePreditivaScore/
 
 ## O que NÃO commitar
 
-- `.env` · `outputs/graficos/` · `outputs/coverage_html/` · `__pycache__/` · `.ipynb_checkpoints/`
+- `.env` · `docs/anotacoes.txt` · `__pycache__/` · `.ipynb_checkpoints/`
+
+> `outputs/` (gráficos, `coverage_html/` e JSONs de métricas) **é versionado propositalmente** — evidencia os resultados no GitHub sem exigir que o avaliador rode o notebook.
 
 ---
 

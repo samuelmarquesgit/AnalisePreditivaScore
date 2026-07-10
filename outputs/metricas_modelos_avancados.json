@@ -1,0 +1,25 @@
+{
+  "resultados": {
+    "knn": {
+      "acuracia_treino": 0.9578,
+      "acuracia_teste": 0.908
+    },
+    "arvore_decisao": {
+      "acuracia_treino": 0.9896,
+      "acuracia_teste": 0.937
+    },
+    "random_forest": {
+      "acuracia_treino": 0.9896,
+      "acuracia_teste": 0.9455
+    },
+    "xgboost": {
+      "acuracia_treino": 0.9868,
+      "acuracia_teste": 0.9655
+    },
+    "lightgbm": {
+      "acuracia_treino": 0.9798,
+      "acuracia_teste": 0.961
+    }
+  },
+  "melhor_modelo": "xgboost"
+}

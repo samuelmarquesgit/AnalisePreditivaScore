@@ -1,0 +1,14 @@
+{
+  "melhor_knn": {
+    "k": 3,
+    "acuracia_treino": 0.9578,
+    "acuracia_teste": 0.908
+  },
+  "melhor_arvore": {
+    "max_depth": null,
+    "acuracia_treino": 0.9896,
+    "acuracia_teste": 0.937
+  },
+  "modelo_selecionado": "Árvore de Decisão",
+  "justificativa": "O modelo Árvore de Decisão obteve a maior acurácia no conjunto de teste (0.9370 contra 0.9080 do concorrente, diferença de 0.0290), sendo portanto a escolha recomendada para este problema."
+}
