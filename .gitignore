@@ -21,13 +21,6 @@ venv/
 env/
 ENV/
 
-# Outputs gerados (regeneráveis)
-outputs/graficos/
-outputs/coverage_html/
-outputs/metricas_finais.json
-outputs/auditoria_metricas.json
-outputs/metricas_modelos_avancados.json
-
 # Anotações pessoais — não versionar
 docs/anotacoes.txt
 
