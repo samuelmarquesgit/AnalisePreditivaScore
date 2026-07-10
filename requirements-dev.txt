@@ -1,0 +1,10 @@
+# Inclui dependências de produção
+-r requirements.txt
+
+# Testes e cobertura
+pytest>=7.4.0
+pytest-cov>=4.1.0
+nbmake>=1.5.0
+
+# Qualidade de código
+nbqa>=1.7.0
