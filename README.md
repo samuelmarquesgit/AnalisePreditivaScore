@@ -39,7 +39,7 @@ Além disso, o notebook traz uma **extensão exploratória** (Fases 8-10, não o
 ## Estrutura do Projeto
 
 ```
-AnalisePreditivaScore/
+PredictMaint/
 ├── notebook.ipynb          ← pipeline completo (7 fases)
 ├── requirements.txt        ← dependências de produção
 ├── requirements-dev.txt    ← dependências de desenvolvimento
@@ -64,8 +64,8 @@ AnalisePreditivaScore/
 
 ### 1. Clone o repositório
 ```bash
-git clone git@github.com:samuelmarquesgit/AnalisePreditivaScore.git
-cd AnalisePreditivaScore
+git clone git@github.com:samuelmarquesgit/PredictMaint.git
+cd PredictMaint
 ```
 
 ### 2. Instale as dependências

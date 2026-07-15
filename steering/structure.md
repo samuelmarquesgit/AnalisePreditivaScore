@@ -3,7 +3,7 @@
 ## Árvore do Projeto
 
 ```
-AnalisePreditivaScore/
+PredictMaint/
 │
 ├── notebook.ipynb              ← Pipeline: 7 fases obrigatórias + auditoria e Fases 8-10 (exploratório)
 ├── requirements.txt            ← Dependências de produção (versões mínimas; fixar com `pip freeze` antes da entrega)
